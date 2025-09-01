@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 app.post("/submit", (req, res) => {
   let randomNumAdj = Math.floor(Math.random() * adj.length);
   let randomNumNoun = Math.floor(Math.random() * noun.length);
-  let generatedName = adj[randomNumAdj] + noun[randomNumNoun];
+  let generatedName = adj[randomNumAdj] + " " + noun[randomNumNoun];
   res.render("index.ejs", { bandName: generatedName });
 });
 
